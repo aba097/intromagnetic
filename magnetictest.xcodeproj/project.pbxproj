@@ -13,6 +13,7 @@
 		43211C7028ACED2000D6AD56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43211C6E28ACED2000D6AD56 /* Main.storyboard */; };
 		43211C7228ACED2300D6AD56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43211C7128ACED2300D6AD56 /* Assets.xcassets */; };
 		43211C7528ACED2300D6AD56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43211C7328ACED2300D6AD56 /* LaunchScreen.storyboard */; };
+		43211C7D28AE512200D6AD56 /* magneticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43211C7C28AE512200D6AD56 /* magneticModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		43211C7128ACED2300D6AD56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43211C7428ACED2300D6AD56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43211C7628ACED2300D6AD56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43211C7C28AE512200D6AD56 /* magneticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magneticModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				43211C6828ACED2000D6AD56 /* AppDelegate.swift */,
 				43211C6A28ACED2000D6AD56 /* SceneDelegate.swift */,
 				43211C6C28ACED2000D6AD56 /* ViewController.swift */,
+				43211C7C28AE512200D6AD56 /* magneticModel.swift */,
 				43211C6E28ACED2000D6AD56 /* Main.storyboard */,
 				43211C7128ACED2300D6AD56 /* Assets.xcassets */,
 				43211C7328ACED2300D6AD56 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43211C6D28ACED2000D6AD56 /* ViewController.swift in Sources */,
+				43211C7D28AE512200D6AD56 /* magneticModel.swift in Sources */,
 				43211C6928ACED2000D6AD56 /* AppDelegate.swift in Sources */,
 				43211C6B28ACED2000D6AD56 /* SceneDelegate.swift in Sources */,
 			);
