@@ -25,12 +25,11 @@ class MotionSensor: NSObject {
         
         if motionManager.isDeviceMotionAvailable && !isStarted{
             motionManager.deviceMotionUpdateInterval = 0.1
-            motionManager.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {(motion:CMDeviceMotion?, error:Error?) in
-                self.updateMotionData(deviceMotion: motion!)
-            })
+            motionManager.startDeviceMotionUpdates(using: [.xMagneticNorthZVertical], to: OperationQueue.current!, withHandler: {(motion:CMDeviceMotion?, error:Error?) in
+                        self.updateMotionData(deviceMotion: motion)
+                    })
+            isStarted = true
         }
-        
-        isStarted = true
     }
     
     func stop() {
@@ -40,10 +39,12 @@ class MotionSensor: NSObject {
         }
     }
     
-    private func updateMotionData(deviceMotion:CMDeviceMotion) {
-        let xStr = String(deviceMotion.magneticField.field.x)
-        let yStr = String(deviceMotion.magneticField.field.y)
-        let zStr = String(deviceMotion.magneticField.field.z)
+    private func updateMotionData(deviceMotion: CMDeviceMotion?) {
+        guard let field = deviceMotion?.magneticField.field else { return }
+        
+        let xStr = "X: " + String(field.x)
+        let yStr = "Y: " + String(field.y)
+        let zStr = "Z: " + String(field.z)
         
         self.delegate?.UpdateView(x: xStr, y: yStr, z: zStr)
     }
