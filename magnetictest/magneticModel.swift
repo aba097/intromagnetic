@@ -42,9 +42,9 @@ class MotionSensor: NSObject {
     private func updateMotionData(deviceMotion: CMDeviceMotion?) {
         guard let field = deviceMotion?.magneticField.field else { return }
         
-        let xStr = "X: " + String(field.x)
-        let yStr = "Y: " + String(field.y)
-        let zStr = "Z: " + String(field.z)
+        let xStr = String(round(field.x * 100) / 100)
+        let yStr = String(round(field.y * 100) / 100)
+        let zStr = String(round(field.z * 100) / 100)
         
         self.delegate?.UpdateView(x: xStr, y: yStr, z: zStr)
     }

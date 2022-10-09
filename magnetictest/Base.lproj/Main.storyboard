@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,32 +17,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpI-bf-rMb">
-                                <rect key="frame" x="99" y="218" width="216" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpI-bf-rMb">
+                                <rect key="frame" x="107" y="148" width="200" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="h1c-p3-sMa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-NX-9Rg">
-                                <rect key="frame" x="99" y="301" width="216" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-NX-9Rg">
+                                <rect key="frame" x="107" y="218.5" width="200" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="iVQ-NY-AkE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSi-sP-JSK">
-                                <rect key="frame" x="99" y="394" width="216" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSi-sP-JSK">
+                                <rect key="frame" x="107" y="289" width="200" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="oV0-kH-vQA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11i-MN-riF">
+                                <rect key="frame" x="30" y="543.5" width="165.5" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="記録スタート"/>
+                                <connections>
+                                    <action selector="pressedRecordStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qFH-HU-qWd"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejK-Ik-Rpc">
+                                <rect key="frame" x="30" y="409.5" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjQ-f1-H0J">
+                                <rect key="frame" x="215.5" y="543.5" width="168.5" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="記録終了"/>
+                                <connections>
+                                    <action selector="pressedRecordStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFS-wa-bgh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rMs-NX-9Rg" firstAttribute="top" secondItem="KpI-bf-rMb" secondAttribute="bottom" constant="50" id="14f-WS-vUL"/>
+                            <constraint firstItem="KpI-bf-rMb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2LL-UH-ucu"/>
+                            <constraint firstItem="FSi-sP-JSK" firstAttribute="top" secondItem="rMs-NX-9Rg" secondAttribute="bottom" constant="50" id="A8Q-z3-XMO"/>
+                            <constraint firstItem="11i-MN-riF" firstAttribute="top" secondItem="ejK-Ik-Rpc" secondAttribute="bottom" constant="100" id="Bry-zD-WYo"/>
+                            <constraint firstItem="rMs-NX-9Rg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gxn-zl-5c3"/>
+                            <constraint firstItem="gjQ-f1-H0J" firstAttribute="centerY" secondItem="11i-MN-riF" secondAttribute="centerY" id="LTL-hm-LP8"/>
+                            <constraint firstItem="FSi-sP-JSK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NWM-YP-APQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gjQ-f1-H0J" secondAttribute="trailing" constant="30" id="VBm-gn-bFB"/>
+                            <constraint firstItem="11i-MN-riF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="ZaP-KX-7E3"/>
+                            <constraint firstItem="KpI-bf-rMb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="ZoK-Bu-G14"/>
+                            <constraint firstItem="11i-MN-riF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="aLP-l1-j6e"/>
+                            <constraint firstItem="ejK-Ik-Rpc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="e6f-Al-8rD"/>
+                            <constraint firstItem="gjQ-f1-H0J" firstAttribute="leading" secondItem="11i-MN-riF" secondAttribute="trailing" constant="20" id="mOH-bE-rMY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ejK-Ik-Rpc" secondAttribute="trailing" constant="30" id="uan-bL-YTQ"/>
+                            <constraint firstItem="ejK-Ik-Rpc" firstAttribute="top" secondItem="FSi-sP-JSK" secondAttribute="bottom" constant="100" id="yOJ-Dd-Dxc"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="fileNameTextField" destination="ejK-Ik-Rpc" id="I4p-HV-GkT"/>
+                        <outlet property="recordStartButton" destination="11i-MN-riF" id="yxO-JY-TkL"/>
+                        <outlet property="recordStopButton" destination="gjQ-f1-H0J" id="vYM-EI-9O2"/>
                         <outlet property="xLabel" destination="KpI-bf-rMb" id="p7g-Xn-Cpr"/>
                         <outlet property="yLabel" destination="rMs-NX-9Rg" id="bNo-CX-QnD"/>
                         <outlet property="zLabel" destination="FSi-sP-JSK" id="X87-L9-vGc"/>
